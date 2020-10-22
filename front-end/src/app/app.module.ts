@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/templeate/header/header.component'
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FooterComponent } from './components/templeate/footer/footer.component';
 import { NavComponent } from './components/templeate/nav/nav.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NavComponent } from './components/templeate/nav/nav.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
