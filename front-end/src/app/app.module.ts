@@ -9,12 +9,14 @@ import { HeaderComponent } from './components/templeate/header/header.component'
 /*Material*/
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FooterComponent } from './components/templeate/footer/footer.component';
+import { NavComponent } from './components/templeate/nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
