@@ -11,6 +11,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { FooterComponent } from './components/templeate/footer/footer.component';
 import { NavComponent } from './components/templeate/nav/nav.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
