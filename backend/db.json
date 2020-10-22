@@ -1,0 +1,18 @@
+{
+  "usuario": [
+    {
+      "id": 1,
+      "nome": "admin",
+      "senha": "12345",
+      "status": 1,
+      "perfil": "admin"
+    },
+    {
+      "nome": "renato",
+      "senha": "987654",
+      "status": "0",
+      "perfim": "user",
+      "id": 2
+    }
+  ]
+}
