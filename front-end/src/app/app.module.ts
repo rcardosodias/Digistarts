@@ -18,6 +18,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { UpdateUsuarioComponent } from './components/cadastro/update-usuario/update-usuario.component';
 
 
 @NgModule({
@@ -28,7 +30,8 @@ import { MatButtonModule } from '@angular/material/button';
     NavComponent,
     HomeComponent,
     CadastroComponent,
-    AddUsuarioComponent
+    AddUsuarioComponent,
+    UpdateUsuarioComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatSidenavModule,
     MatListModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
