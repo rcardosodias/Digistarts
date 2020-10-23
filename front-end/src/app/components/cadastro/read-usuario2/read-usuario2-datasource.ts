@@ -4,34 +4,18 @@ import { MatSort } from '@angular/material/sort';
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
 
-// TODO: Replace this with your own data model type
-export interface ReadUsuario2Item {
-  name: string;
-  id: number;
-}
+
+
+/*importando o modelo Cadastro*/
+import { Cadastro } from '../cadastroUsuario.model';
+
 
 // TODO: replace this with real data from your application
-const EXAMPLE_DATA: ReadUsuario2Item[] = [
-  {id: 1, name: 'Hydrogen'},
-  {id: 2, name: 'Helium'},
-  {id: 3, name: 'Lithium'},
-  {id: 4, name: 'Beryllium'},
-  {id: 5, name: 'Boron'},
-  {id: 6, name: 'Carbon'},
-  {id: 7, name: 'Nitrogen'},
-  {id: 8, name: 'Oxygen'},
-  {id: 9, name: 'Fluorine'},
-  {id: 10, name: 'Neon'},
-  {id: 11, name: 'Sodium'},
-  {id: 12, name: 'Magnesium'},
-  {id: 13, name: 'Aluminum'},
-  {id: 14, name: 'Silicon'},
-  {id: 15, name: 'Phosphorus'},
-  {id: 16, name: 'Sulfur'},
-  {id: 17, name: 'Chlorine'},
-  {id: 18, name: 'Argon'},
-  {id: 19, name: 'Potassium'},
-  {id: 20, name: 'Calcium'},
+const EXAMPLE_DATA: Cadastro[] = [
+  {id: 1, nome: 'Hydrogen', senha: '203942ni',},
+  {id: 2, nome: 'Helium', senha: '1234'},
+  {id: 3, nome: 'Lithium', senha: '654654'},
+  {id: 4, nome: 'Beryllium', senha: '2156846'}
 ];
 
 /**
@@ -39,8 +23,8 @@ const EXAMPLE_DATA: ReadUsuario2Item[] = [
  * encapsulate all logic for fetching and manipulating the displayed data
  * (including sorting, pagination, and filtering).
  */
-export class ReadUsuario2DataSource extends DataSource<ReadUsuario2Item> {
-  data: ReadUsuario2Item[] = EXAMPLE_DATA;
+export class ReadUsuario2DataSource extends DataSource<Cadastro> {
+  data: Cadastro[] = EXAMPLE_DATA;
   paginator: MatPaginator;
   sort: MatSort;
 
@@ -53,7 +37,7 @@ export class ReadUsuario2DataSource extends DataSource<ReadUsuario2Item> {
    * the returned stream emits new items.
    * @returns A stream of the items to be rendered.
    */
-  connect(): Observable<ReadUsuario2Item[]> {
+  connect(): Observable<Cadastro[]> {
     // Combine everything that affects the rendered data into one update
     // stream for the data-table to consume.
     const dataMutations = [
@@ -77,7 +61,7 @@ export class ReadUsuario2DataSource extends DataSource<ReadUsuario2Item> {
    * Paginate the data (client-side). If you're using server-side pagination,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getPagedData(data: ReadUsuario2Item[]) {
+  private getPagedData(data: Cadastro[]) {
     const startIndex = this.paginator.pageIndex * this.paginator.pageSize;
     return data.splice(startIndex, this.paginator.pageSize);
   }
@@ -86,7 +70,7 @@ export class ReadUsuario2DataSource extends DataSource<ReadUsuario2Item> {
    * Sort the data (client-side). If you're using server-side sorting,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getSortedData(data: ReadUsuario2Item[]) {
+  private getSortedData(data: Cadastro[]) {
     if (!this.sort.active || this.sort.direction === '') {
       return data;
     }
@@ -94,8 +78,9 @@ export class ReadUsuario2DataSource extends DataSource<ReadUsuario2Item> {
     return data.sort((a, b) => {
       const isAsc = this.sort.direction === 'asc';
       switch (this.sort.active) {
-        case 'name': return compare(a.name, b.name, isAsc);
+        case 'name': return compare(a.nome, b.nome, isAsc);
         case 'id': return compare(+a.id, +b.id, isAsc);
+        case 'senha': return compare(+a.senha, +b.senha, isAsc);
         default: return 0;
       }
     });

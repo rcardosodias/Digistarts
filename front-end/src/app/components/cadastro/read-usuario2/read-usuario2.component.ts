@@ -2,7 +2,8 @@ import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
-import { ReadUsuario2DataSource, ReadUsuario2Item } from './read-usuario2-datasource';
+import { Cadastro } from '../cadastroUsuario.model';
+import { ReadUsuario2DataSource } from './read-usuario2-datasource';
 
 @Component({
   selector: 'app-read-usuario2',
@@ -12,11 +13,11 @@ import { ReadUsuario2DataSource, ReadUsuario2Item } from './read-usuario2-dataso
 export class ReadUsuario2Component implements AfterViewInit, OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-  @ViewChild(MatTable) table: MatTable<ReadUsuario2Item>;
+  @ViewChild(MatTable) table: MatTable<Cadastro>;
   dataSource: ReadUsuario2DataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name'];
+  displayedColumns = ['id', 'name', 'senha'];
 
   ngOnInit() {
     this.dataSource = new ReadUsuario2DataSource();
