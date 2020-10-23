@@ -13,6 +13,11 @@
       "status": "0",
       "perfim": "user",
       "id": 2
+    },
+    {
+      "id": 3,
+      "nome": "Renato",
+      "senha": "203942ni"
     }
   ]
 }

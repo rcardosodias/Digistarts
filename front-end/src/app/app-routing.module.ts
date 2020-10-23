@@ -7,6 +7,7 @@ import { HomeComponent } from './views/home/home.component';
 import { CadastroComponent } from './views/cadastro/cadastro.component';
 
 import { AddUsuarioComponent } from './components/cadastro/add-usuario/add-usuario.component';
+import { UpdateUsuarioComponent } from './components/cadastro/update-usuario/update-usuario.component';
 
 
 const routes: Routes = [{
@@ -19,6 +20,9 @@ const routes: Routes = [{
 },{
   path: "cadastro/add-usuario",
   component: AddUsuarioComponent
+},{
+  path: "cadastro/update-usuario:id",
+  component: UpdateUsuarioComponent
 }
 
 ];

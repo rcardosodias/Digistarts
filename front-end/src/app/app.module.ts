@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/templeate/header/header.component';
 
-import { AddUsuarioComponent} from './components/cadastro/add-usuario/add-usuario.component';
+import { AddUsuarioComponent } from './components/cadastro/add-usuario/add-usuario.component';
 import { CadastroComponent } from './views/cadastro/cadastro.component';
 import { HomeComponent } from './views/home/home.component';
 import { NavComponent } from './components/templeate/nav/nav.component';
@@ -20,7 +20,17 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { UpdateUsuarioComponent } from './components/cadastro/update-usuario/update-usuario.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
+/*modulo formulario*/
+
+import { FormsModule } from '@angular/forms';
+
+
+/*importando http*/
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -42,7 +52,12 @@ import { UpdateUsuarioComponent } from './components/cadastro/update-usuario/upd
     MatListModule,
     MatCardModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    HttpClientModule,
+    FormsModule,
+    MatInputModule,
+    MatFormFieldModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

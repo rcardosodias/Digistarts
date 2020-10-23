@@ -2,7 +2,7 @@ export interface Cadastro{
   id: number
   nome: string
   senha: string
-  status?: number
+  status?: string
   perfil?: string
 
 }
