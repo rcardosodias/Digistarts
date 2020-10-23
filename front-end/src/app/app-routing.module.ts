@@ -6,6 +6,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './views/home/home.component';
 import { CadastroComponent } from './views/cadastro/cadastro.component';
 
+import { AddUsuarioComponent } from './components/cadastro/add-usuario/add-usuario.component';
+
+
 const routes: Routes = [{
   path: "",
   component: HomeComponent
@@ -13,6 +16,9 @@ const routes: Routes = [{
 {
   path: "Cadastro",
   component: CadastroComponent
+},{
+  path: "cadastro/add-usuario",
+  component: AddUsuarioComponent
 }
 
 ];

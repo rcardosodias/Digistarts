@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+/*importando o router*/
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
@@ -7,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
-
+navegaCadastro(): void{
+  this.router.navigate(['cadastro/add-usuario'])
+}
 }
