@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 
 /*imporntando o modelo de usuario*/
 
-import { Cadastro} from './cadastroUsuario.model'
+import { Cadastro } from './cadastroUsuario.model';
 
 
 @Injectable({
@@ -28,7 +28,11 @@ export class CadastroUsuarioService {
   }
 
   /*inserindo dados*/
-  create(cadastro: Cadastro): Observable<Cadastro>{
-    return this.http.post<Cadastro>(this.baseUrl, cadastro )
+  create(cadastro: Cadastro): Observable<Cadastro> {
+    return this.http.post<Cadastro>(this.baseUrl, cadastro)
+  }
+  /*Ler os usuario*/
+  read(): Observable<Cadastro[]> {
+    return this.http.get<Cadastro[]>(this.baseUrl)
   }
 }
