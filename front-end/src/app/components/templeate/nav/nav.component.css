@@ -1,3 +1,7 @@
 .sidenav{
   background-color: #ccc;
 }
+.content{
+  padding: 16px;
+  background-color: #ffffff;
+}
