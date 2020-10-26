@@ -10,6 +10,7 @@ import { AddUsuarioComponent } from './components/cadastro/add-usuario/add-usuar
 import { UpdateUsuarioComponent } from './components/cadastro/update-usuario/update-usuario.component';
 
 
+
 const routes: Routes = [{
   path: "",
   component: HomeComponent
@@ -21,7 +22,7 @@ const routes: Routes = [{
   path: "cadastro/add-usuario",
   component: AddUsuarioComponent
 },{
-  path: "cadastro/update-usuario:id",
+  path: "cadastro/update-usuario/:id",
   component: UpdateUsuarioComponent
 }
 

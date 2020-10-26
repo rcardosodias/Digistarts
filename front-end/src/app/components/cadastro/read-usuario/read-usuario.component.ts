@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { MatTable } from '@angular/material/table';
 import { CadastroUsuarioService } from '../cadastro-usuario.service';
 import { Cadastro } from '../cadastroUsuario.model';
 
@@ -7,17 +8,18 @@ import { Cadastro } from '../cadastroUsuario.model';
   templateUrl: './read-usuario.component.html',
   styleUrls: ['./read-usuario.component.css']
 })
-export class ReadUsuarioComponent implements OnInit {
+export class ReadUsuarioComponent implements  OnInit {
 
-  cadastro: Cadastro[]
+cadastro: Cadastro[]
+displayedColumns = ['id','nome','senha','acao']
 
   constructor(private cadastroUsuarioService: CadastroUsuarioService) { }
 
   ngOnInit(): void {
     this.cadastroUsuarioService.read().subscribe(cadastro => {
       this.cadastro = cadastro
-      console.log(cadastro)
     })
   }
+
 
 }

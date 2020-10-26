@@ -1,1 +1,23 @@
-<p>update-usuario works!</p>
+<mat-card class="mat-elevation-z4">
+    <mat-card-title>Atulizar Cadastro</mat-card-title>
+    <form >
+      <mat-form-field>
+        <input matInput placeholder="Nome" [(ngModel)]="cadastro.nome"  name="nome">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Senha" [(ngModel)]="cadastro.senha" name="senha">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Status" [(ngModel)]="cadastro.status" name="status">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Perfil" [(ngModel)]="cadastro.perfil" name="perfil">
+      </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="atualizarUsuario()">
+    Salvar
+    </button>
+    <button mat-raised-button (click)="cancelar()">
+    Cancelar
+    </button>
+  </mat-card>

@@ -25,6 +25,20 @@
       "senha": "teste",
       "status": "ativo",
       "perfil": "admin"
+    },
+    {
+      "id": 5,
+      "nome": "sofia",
+      "senha": "12345",
+      "status": "ativo",
+      "perfil": "adimin"
+    },
+    {
+      "id": 6,
+      "nome": "teste",
+      "senha": "teste",
+      "status": "teste",
+      "perfil": "tese"
     }
   ]
 }

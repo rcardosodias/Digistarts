@@ -35,4 +35,13 @@ export class CadastroUsuarioService {
   read(): Observable<Cadastro[]> {
     return this.http.get<Cadastro[]>(this.baseUrl)
   }
+  readById(id: string):Observable<Cadastro>{
+    const url = `${this.baseUrl}/${id}`
+    return this.http.get<Cadastro>(url)
+  }
+  update(cadastro: Cadastro): Observable<Cadastro>{
+    const url = `${this.baseUrl}/${cadastro.id}`
+    return this.http.put<Cadastro>(url, cadastro)
+    
+  }
 }

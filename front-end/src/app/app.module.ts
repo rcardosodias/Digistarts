@@ -32,7 +32,6 @@ import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ReadUsuarioComponent } from './components/cadastro/read-usuario/read-usuario.component';
-import { ReadUsuario2Component } from './components/cadastro/read-usuario2/read-usuario2.component';
 /*importando o schematcs*/
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -48,8 +47,7 @@ import { MatSortModule } from '@angular/material/sort';
     CadastroComponent,
     AddUsuarioComponent,
     UpdateUsuarioComponent,
-    ReadUsuarioComponent,
-    ReadUsuario2Component
+    ReadUsuarioComponent
   ],
   imports: [
     BrowserModule,

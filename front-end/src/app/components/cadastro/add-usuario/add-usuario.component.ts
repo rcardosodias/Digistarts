@@ -12,6 +12,7 @@ import { Cadastro } from '../cadastroUsuario.model';
   styleUrls: ['./add-usuario.component.css']
 })
 export class AddUsuarioComponent implements OnInit {
+  
   cadastro: Cadastro = {  
     id: null,
     nome: '',
